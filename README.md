@@ -1,2 +1,3 @@
-# memory-card
-Memory card game contains multiple cards where users gain points by clicking a card once and will lose if a card is clicked twice
+# Memory Card
+
+The memory card game features multiple cards. Players earn points by clicking on a card once but lose the game if they click on the same card twice
