@@ -10,17 +10,20 @@ header.header {
   padding: 1rem;
   gap: 20px;
   border: 3px solid #002a23;
-  background-image: linear-gradient(#ffff00);
-  animation: background-color-change 300ms linear infinite alternate;
+  background: linear-gradient(270deg, #000000, #002a23);
+  background-size: 400% 400%;
+  animation: background-gradient-change 20s linear infinite;
 }
 
-@keyframes background-color-change {
-  from {
-    background-image: linear-gradient(#ffff00);
+@keyframes background-gradient-change {
+  0% {
+    background-position: 0% 50%;
   }
-
-  to {
-    background-image: linear-gradient(#a52a2a);
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
@@ -107,5 +110,11 @@ footer.footer {
 @media (max-width: 372px) {
   .score-container > p {
     width: min-content;
+  }
+}
+
+@media (hover: none) {
+  .card-container:hover {
+    box-shadow: none;
   }
 }
