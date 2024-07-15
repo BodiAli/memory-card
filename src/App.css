@@ -1,7 +1,14 @@
 #root {
   background-color: #000000;
-  color: white;
+  color: #ffffff;
   font-family: sans-serif;
+  min-height: 100vh;
+}
+
+.error-message {
+  color: rgba(255, 0, 0, 0.657);
+  margin: 20px;
+  font-weight: bold;
 }
 
 header.header {
@@ -43,6 +50,7 @@ header.header {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  font-weight: bold;
 }
 
 .score-container {
@@ -79,15 +87,20 @@ main.main {
 .img {
   height: 280px;
   width: 100%;
-  border: 1px solid yellow;
+  object-fit: cover;
+}
+
+.card-name {
+  color: #6e573f;
+  font-weight: bold;
+  text-align: center;
 }
 
 footer.footer {
-  border: 3px solid #002a23;
   padding: 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .footer > .github-container {
@@ -95,16 +108,13 @@ footer.footer {
   gap: 10px;
 }
 
-.github-container > .github {
-  border: 2px solid white;
+.github-container img {
   width: 32px;
-  height: 32px;
+  transition: filter 300ms ease;
 }
 
-.github-container > .github-profile {
-  border: 2px solid white;
-  width: 32px;
-  height: 32px;
+.github-container img:hover {
+  filter: drop-shadow(0px 0px 5px #765645);
 }
 
 @media (max-width: 372px) {
