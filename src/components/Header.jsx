@@ -7,10 +7,6 @@ function Header({ count }) {
     if (count > bestScore) {
       setBestScore(count);
     }
-
-    return () => {
-      setBestScore(0);
-    };
   }, [bestScore, count]);
 
   return (
