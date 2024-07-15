@@ -1,4 +1,18 @@
-function Header() {
+import { useEffect, useState } from "react";
+
+function Header({ count }) {
+  const [bestScore, setBestScore] = useState(0);
+
+  useEffect(() => {
+    if (count > bestScore) {
+      setBestScore(count);
+    }
+
+    return () => {
+      setBestScore(0);
+    };
+  }, [bestScore, count]);
+
   return (
     <header className="header">
       <div className="header-container">
@@ -6,11 +20,11 @@ function Header() {
         <div className="score">
           <div className="score-container">
             <p>Score:</p>
-            <span>0</span>
+            <span>{count}</span>
           </div>
           <div className="score-container">
             <p>Best score:</p>
-            <span>0</span>
+            <span>{bestScore}</span>
           </div>
         </div>
       </div>
