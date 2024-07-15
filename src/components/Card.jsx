@@ -1,8 +1,8 @@
-function Card() {
+function Card({ title, url, handleClick }) {
   return (
-    <div className="card-container">
-      <div className="img"></div>
-      <p className="card-name">Example</p>
+    <div onClick={handleClick} className="card-container">
+      <img className="img" src={url} alt={title} />
+      <p className="card-name">{title}</p>
     </div>
   );
 }
