@@ -1,10 +1,16 @@
+import profileIcon from "../assets/profile-icon.svg";
+import githubIcon from "../assets/github-icon.svg";
+
 function Footer() {
   return (
     <footer className="footer">
-      <h2>By Bodi Ali</h2>
       <div className="github-container">
-        <div className="github"></div>
-        <div className="github-profile"></div>
+        <a href="https://github.com/BodiAli">
+          <img src={profileIcon} alt="Visit profile" />
+        </a>
+        <a href="https://github.com/BodiAli/memory-card">
+          <img src={githubIcon} alt="Visit github repository" />
+        </a>
       </div>
     </footer>
   );
