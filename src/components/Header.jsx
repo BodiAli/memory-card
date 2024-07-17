@@ -1,13 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function Header({ count }) {
   const [bestScore, setBestScore] = useState(0);
 
-  useEffect(() => {
-    if (count > bestScore) {
-      setBestScore(count);
-    }
-  }, [bestScore, count]);
+  if (count > bestScore) {
+    setBestScore(count);
+  }
 
   return (
     <header className="header">
