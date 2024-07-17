@@ -44,14 +44,7 @@ function App() {
     }
   }
   useEffect(() => {
-    let ignore = false;
-    if (!ignore) {
-      fetchImg();
-    }
-
-    return () => {
-      ignore = true;
-    };
+    fetchImg();
   }, []);
 
   function handleClick(index) {
