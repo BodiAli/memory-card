@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-function Header({ count }) {
+function Header({ score }) {
   const [bestScore, setBestScore] = useState(0);
 
-  if (count > bestScore) {
-    setBestScore(count);
+  if (score > bestScore) {
+    setBestScore(score);
   }
 
   return (
@@ -14,7 +14,7 @@ function Header({ count }) {
         <div className="score">
           <div className="score-container">
             <p>Score:</p>
-            <span>{count}</span>
+            <span>{score}</span>
           </div>
           <div className="score-container">
             <p>Best score:</p>

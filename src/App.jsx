@@ -16,7 +16,7 @@ function shuffleArray(array) {
 }
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [score, setScore] = useState(0);
   const [cardsArr, setCardsArr] = useState(null);
   const [error, setError] = useState(null);
   async function fetchImg() {
@@ -53,12 +53,12 @@ function App() {
     let updatedArr;
 
     if (isClicked) {
-      setCount(0);
+      setScore(0);
       updatedArr = cardsArr.map((card) => {
         return { ...card, clicked: false };
       });
     } else {
-      setCount((prevCount) => prevCount + 1);
+      setScore((prevscore) => prevscore + 1);
       const arr = cardsArr.map((card, i) => {
         if (index === i) {
           return { ...card, clicked: true };
@@ -74,7 +74,7 @@ function App() {
 
   return (
     <>
-      <Header count={count} />
+      <Header score={score} />
       {error ? (
         <p className="error-message">{error}</p>
       ) : (
