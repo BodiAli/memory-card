@@ -16,6 +16,7 @@ function shuffleArray(array) {
 }
 
 function App() {
+  const [scrollPosition, setScrollPosition] = useState(0);
   const [score, setScore] = useState(0);
   const [cardsArr, setCardsArr] = useState(null);
   const [error, setError] = useState(null);
@@ -47,7 +48,13 @@ function App() {
     fetchImg();
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, scrollPosition);
+  }, [cardsArr, scrollPosition]);
+
   function handleClick(index) {
+    const currentScrollPosition = window.scrollY;
+    setScrollPosition(currentScrollPosition);
     const isClicked = cardsArr[index].clicked;
 
     let updatedArr;
